@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+<?${TM_PHP_OPEN_TAG:php}
+	\$args = array(
+			'post_type'=>'${1:post}',
+			'posts_per_page'=>${2:-1},
+			'post_status'=>'publish',
+			'orderby'=>'ID',
+			'order'=>'ASC'
+	);
+	\$records = new WP_Query(\$args);?>
+<?${TM_PHP_OPEN_TAG:php} if( \$records->have_posts() ):?>
+	<!-- Container Here -->
+	<?${TM_PHP_OPEN_TAG:php} while(\$records->have_posts()): \$records->the_post();?>
+			<!-- Display Contents here -->
+	<?${TM_PHP_OPEN_TAG:php} endwhile; wp_reset_postdata(); ?>
+<?${TM_PHP_OPEN_TAG:php} else:?>
+	<h3>No Records Found!</h3>
+<?${TM_PHP_OPEN_TAG:php} endif;?>
+]]></content>
+	<description>Wordpress Loop</description>
+	<tabTrigger>wp-q</tabTrigger>
+	<scope>embedding.php text.html.basic</scope>
+</snippet>
