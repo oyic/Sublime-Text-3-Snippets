@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+<?${TM_PHP_OPEN_TAG:php}
+// check if the repeater field has rows of data
+if( have_rows('${1:repeater_field') ):
+
+ 	// loop through the rows of data
+    while ( have_rows('${1:repeater_field') ) : the_row();
+
+        // display a sub field value
+        the_sub_field('sub_field_name');
+
+    endwhile;
+
+else :
+
+    // no rows found
+
+endif;
+?>
+]]></content>
+	<description>ACF Repeater Parsing</description>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>acf-repeat</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>embedding.php text.html.basic</scope>
+</snippet>
