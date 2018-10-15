@@ -18,7 +18,7 @@
 	<h3>No Records Found!</h3>
 <?${TM_PHP_OPEN_TAG:php} endif;?>
 ]]></content>
-	<description>Wordpress Loop</description>
+	<description>Wordpress Query Loop</description>
 	<tabTrigger>wp-q</tabTrigger>
 	<scope>embedding.php text.html.basic</scope>
 </snippet>
