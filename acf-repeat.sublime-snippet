@@ -5,7 +5,7 @@
 if( have_rows('${1:repeater_field') ):
 
  	// loop through the rows of data
-    while ( have_rows('${1:repeater_field') ) : the_row();
+    while ( have_rows('${1:repeater_field}') ) : the_row();
 
         // display a sub field value
         the_sub_field('sub_field_name');
